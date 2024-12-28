@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kW vs kVA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css" media="all">
+      /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    background-color: #121212;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+}
+
+header p {
+    color: #cfcfcf;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 5px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+table thead {
+    background-color: #333;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+table th {
+    color: #00bcd4;
+}
+
+table tr:nth-child(even) {
+    background-color: #1e1e1e;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #cfcfcf;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding kW vs kVA</h1>
+        <p>The key differences explained in a professional layout.</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Explore the differences between Kilowatts (kW) and Kilovolt-Amperes (kVA) and why they matter in electrical systems.</p>
+        </section>
+
+        <section class="definition">
+            <h2>Definitions</h2>
+            <div class="card">
+                <h3>kW (Kilowatt)</h3>
+                <p>A measure of real power, which is the actual energy consumed to perform work.</p>
+            </div>
+            <div class="card">
+                <h3>kVA (Kilovolt-Ampere)</h3>
+                <p>A measure of apparent power, including real power and reactive power.</p>
+            </div>
+        </section>
+
+        <section class="differences">
+            <h2>Key Differences</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>kW (Kilowatt)</th>
+                        <th>kVA (Kilovolt-Ampere)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Type of Power</td>
+                        <td>Real Power</td>
+                        <td>Apparent Power</td>
+                    </tr>
+                    <tr>
+                        <td>Measures</td>
+                        <td>Actual energy consumed to do work.</td>
+                        <td>Total power supplied, including losses.</td>
+                    </tr>
+                    <tr>
+                        <td>Power Factor</td>
+                        <td>Accounts for it (kW = kVA × PF).</td>
+                        <td>Does not account for it.</td>
+                    </tr>
+                    <tr>
+                        <td>Use Cases</td>
+                        <td>Used for billing and measuring output.</td>
+                        <td>Used for sizing equipment (generators).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="example">
+            <h2>Example Calculation</h2>
+            <p>An appliance with <strong>2 kW</strong> real power and a <strong>0.8 power factor</strong> will draw:</p>
+            <p><code>kVA = kW / PF = 2 / 0.8 = 2.5 kVA</code></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Power Concepts. All rights reserved.</p>
+    </footer>
+</body>
+</html>

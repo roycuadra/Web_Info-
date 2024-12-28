@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace of Advice 2024</title>
+    <style>
+        /* Sci-Fi Theme Variables */
+:root {
+    --bg-primary: #0a0f1f;
+    --bg-secondary: #121e3b;
+    --neon-primary: #0ff;
+    --neon-secondary: #0088ff;
+    --text-primary: #e2e8f0;
+    --text-glow: #7dd3fc;
+    --card-bg: rgba(16, 24, 48, 0.8);
+    --card-border: rgba(0, 255, 255, 0.1);
+    --grid-color: rgba(0, 255, 255, 0.03);
+}
+
+/* Cyberpunk Grid Background */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: 
+        linear-gradient(90deg, var(--bg-primary) 21px, transparent 1%) center,
+        linear-gradient(var(--bg-primary) 21px, transparent 1%) center,
+        var(--grid-color);
+    background-size: 22px 22px;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Container with Cyber Effect */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Futuristic Heading */
+h1 {
+    text-align: center;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px var(--neon-primary),
+                 0 0 20px var(--neon-primary),
+                 0 0 40px var(--neon-primary);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--neon-primary),
+        var(--neon-secondary),
+        var(--neon-primary),
+        transparent
+    );
+    filter: blur(1px);
+}
+
+/* Sci-Fi List Container */
+.advice-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+}
+
+/* Futuristic Cards */
+.advice-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glowing Border Effect */
+.advice-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: linear-gradient(45deg, 
+        transparent 25%,
+        rgba(0, 255, 255, 0.1) 50%,
+        transparent 75%
+    ) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, 
+                  linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, 
+          linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+.advice-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1),
+                0 0 40px rgba(0, 255, 255, 0.05),
+                inset 0 0 20px rgba(0, 255, 255, 0.05);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+/* Scanner Line Animation */
+@keyframes scanline {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.advice-list li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(0, 255, 255, 0.05) 50%,
+        transparent
+    );
+    animation: scanline 3s linear infinite;
+    pointer-events: none;
+}
+
+/* Cyber Corner Decorations */
+.advice-list li {
+    --corner-size: 6px;
+    --corner-color: var(--neon-primary);
+}
+
+.advice-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-top: 1px solid var(--corner-color);
+    border-left: 1px solid var(--corner-color);
+    opacity: 0.5;
+}
+
+.advice-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: var(--corner-size);
+    height: var(--corner-size);
+    border-bottom: 1px solid var(--corner-color);
+    border-right: 1px solid var(--corner-color);
+    opacity: 0.5;
+}
+
+/* Glowing Text Effect */
+.advice-list li {
+    color: var(--text-primary);
+    text-shadow: 0 0 5px var(--text-glow);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-primary);
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--neon-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-secondary);
+}
+
+/* Selection Style */
+::selection {
+    background: var(--neon-primary);
+    color: var(--bg-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* Animation for the heading glow */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px var(--neon-primary),
+                     0 0 20px var(--neon-primary),
+                     0 0 40px var(--neon-primary);
+    }
+    50% {
+        text-shadow: 0 0 15px var(--neon-primary),
+                     0 0 30px var(--neon-primary),
+                     0 0 60px var(--neon-primary);
+    }
+}
+
+h1 {
+    animation: textGlow 3s ease-in-out infinite;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Peace of Advice 2025</h1>
+        <ul class="advice-list">
+            <li>Stay Focused</li>
+            <li>Don't try to please everyone</li>
+            <li>Privacy is power. People cannot destroy what they do not know.</li>
+            <li>Focus on your dreams not people around you.</li>
+            <li>Prioritize yourself and your loved ones before others.</li>
+            <li>Skills Mastery</li>
+            <li>Focus on Self-improvement </li>
+            <li>Learn to say no</li>
+            <li>Avold Comparison</li>
+            <li>Comparison is the thief of joy.</li>
+            <li>Avoid Oversharing your ideas</li>
+            <li>Talk less to avoid spilling secrets</li>
+            <li>Think before you speak </li>
+            <li>Be mindful of Oversharing Info</li>
+            <li>Know when to walk away</li>
+            <li>Empty cans make the most noise</li>
+            <li>Never talk about your CV if you are not asked.
+            </li>
+            <li>No one really cares about your achievements, just one wrong everything will be wrong.</li>
+            <li>Just be humble and always ensure na naka level ka lang sa environment na ginagalwan mo.</li>
+            <li>It's better to have something you don't need than to need something you don't have.</li>
+            <li>Don’t be too available outside of your priorities.</li>
+            <li>Invest in continuous learning</li>
+            <li>Prioritize hands-on experience</li>
+            <li>Let your achievements speak for themselves</li>
+            <li>Manage your time wisely</li>
+            <li>Balance work and rest</li>
+            <li>Set long-term goals</li>
+            <li>Set clear boundaries</li>
+            <li>Trust your instincts</li>
+            <li>Be selective in your commitments</li>
+        </ul>
+    </div>
+</body>
+</html>

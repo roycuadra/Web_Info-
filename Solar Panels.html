@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Wattages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css" media="all">
+      /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #dddddd;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Solar Panel Wattages</h1>
+        <p>Estimated real-world output based on 75% efficiency.</p>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <h2>15 Watts</h2>
+                <p><strong>Real Wattage:</strong> 11.25W</p>
+                <p>Ideal for small devices and portable use.</p>
+            </div>
+            <div class="card">
+                <h2>20 Watts</h2>
+                <p><strong>Real Wattage:</strong> 15W</p>
+                <p>Great for powering small lights and gadgets.</p>
+            </div>
+            <div class="card">
+                <h2>30 Watts</h2>
+                <p><strong>Real Wattage:</strong> 22.5W</p>
+                <p>Efficient for light outdoor setups.</p>
+            </div>
+            <div class="card">
+                <h2>45 Watts</h2>
+                <p><strong>Real Wattage:</strong> 33.75W</p>
+                <p>Perfect for small-scale outdoor energy needs.</p>
+            </div>
+            <div class="card">
+                <h2>60 Watts</h2>
+                <p><strong>Real Wattage:</strong> 45W</p>
+                <p>Reliable for basic off-grid applications.</p>
+            </div>
+            <div class="card">
+                <h2>100 Watts</h2>
+                <p><strong>Real Wattage:</strong> 75W</p>
+                <p>Suitable for RVs and larger outdoor equipment.</p>
+            </div>
+            <div class="card">
+                <h2>200 Watts</h2>
+                <p><strong>Real Wattage:</strong> 150W</p>
+                <p>Powerful enough for mid-size energy setups.</p>
+            </div>
+            <div class="card">
+                <h2>300 Watts</h2>
+                <p><strong>Real Wattage:</strong> 225W</p>
+                <p>Perfect for residential and larger installations.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Solar Panel Experts</p>
+    </footer>
+</body>
+</html>
